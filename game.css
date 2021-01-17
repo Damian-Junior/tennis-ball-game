@@ -1,0 +1,252 @@
+@keyframes startAnimate{
+	0%{
+		transform: scale(1.1);
+		color:white;
+		background-color: gold;
+	}
+
+	25%{
+		transform: scale(1);
+		color:gold;
+		background-color: white;
+	}
+
+	50%{
+		transform: scale(1.1);
+		color:white;
+		background-color: gold;
+	}
+	75%{
+		transform: scale(1);
+		color:gold;
+		background-color: white;
+	}
+	100%{
+		transform: scale(1.1);
+		color:white;
+		background-color: gold;
+	}
+}
+@keyframes readyAnimate{
+	0%{
+		transform: scale(4);
+		color:white;
+	}
+
+	25%{
+		transform: scale(0.9);
+		color:gold;
+	}
+
+	50%{
+		transform: scale(4);
+		color:white;
+	}
+	75%{
+		transform: scale(0.9);
+		color:gold;
+	}
+	100%{
+		transform: scale(4);
+		color:white;
+	}
+}
+
+*{
+	padding:0px;
+	margin: 0px;
+}
+canvas {
+	background-image: url('image/backgroundImage.png'); 
+	background-size: cover;
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    font-weight: bolder;
+    display: none;
+}
+.images{
+	display: none;
+}
+
+.sounds{
+	display: none;
+}
+/*Home page styling*/
+#homePage{
+	border:1px solid green;
+	height:100vh;
+	background-image: url('image/bgImage3.jpg');
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-blend-mode: multiply;
+	object-fit: cover;
+}
+#setting{
+	border:1px solid gold;
+	width:50%;
+	margin: auto;
+	padding:40px;
+	margin-top:200px;
+}
+#setting label{
+	background-blend-mode: color;
+	width:80%;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    margin-right: 10px;
+
+    box-sizing: border-box;
+    border-radius: 4px;
+    color:gold;
+    text-shadow: 0px 0px 5px gold;
+
+}
+
+#setting input{
+	  outline:none;
+	  width:50%;
+      height: 50px;
+      margin-left: 20px;
+      padding-left: 20px;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      font-size: 1em;
+      color:rgba(0 , 0, 0, 0.4);
+
+}
+ #setting select{
+ 	 width:20%;
+ 	 font-size:0.4em;
+ 	 outline:none;
+     height: 50px;
+     line-height: 10px;
+     margin-left: 20px;
+     padding:5px;
+      
+}
+#player_no{
+	transform: translateX(80px);
+}
+
+#music{
+	transform: translateX(90px);
+}
+#sound{
+	transform: translateX(90px);
+
+}
+#setting select option{
+	margin-bottom: 20px;
+	padding:20px;
+}
+#setting #button{
+	width:20%;
+	height:50px;
+	margin-left: 30%;
+	font-size:1.5em;
+	padding:10px;
+	border-radius:10px;
+	transition: color background-color 1s;
+	transform: translateX(100px) translateY(30px);
+	animation-name: startAnimate;
+	animation-duration: 5s;
+	animation-direction: reverse;
+	animation-iteration-count: infinite;
+	cursor:pointer;
+	box-sizing: border-box;
+
+}
+#ready_text{
+	z-index: 1000;
+	display: none;
+	position: absolute;
+	top:30%;
+	left:45%;
+	font-size: 2em;
+    animation-name: readyAnimate;
+	animation-duration: 2s;
+	animation-direction: reverse;
+	animation-iteration-count: infinite;
+	
+}
+
+#exitPage{
+	position: absolute;
+	top:30%;
+	left:25%;
+	width:20%;
+	height:20%;
+	padding:20px;
+    display: none;
+}
+#exitBg{
+	display: flex;
+	padding:10px 20px;
+	width:100%;
+	margin-top: 20px;
+	margin: auto;
+	justify-content: space-between;
+	transform: translateX(50%) translateY(60px);
+	background-color: white;
+	border-radius: 40px;
+	box-shadow: 0px 0px 10px gold;
+
+}
+
+#exitPage button{
+	width:120%;
+	height:100%;
+	margin-left:10%;
+	margin-top:20%;
+	font-size:1.1em;
+	line-height: 20px;
+	padding:10px;
+	border-radius:10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transform:translateY(-30px) translateX(-10px);
+	background-color:gold;
+	color:white;
+	box-shadow: 0px 0px 10px gold;
+	border:none;
+	transition: color background-color 1s;
+}
+#exitPage button:hover{
+	color:gold;
+	background-color: white;
+}
+
+#instruction{
+	display: none;
+	width:20%;
+	border:2px solid gold;
+	position:absolute;
+	top:35%;
+	left:40%;
+	padding:10px 20px;
+	background-color:gold;
+	box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.1)
+	background-blend-mode:multiply;
+}
+#heading{
+	margin-bottom: 10px;
+}
+#guideText{
+	width: 100%;
+    line-height: 1.5em;
+    font-weight: bolder;
+    font-size:1.5em;
+    font-variant: small-caps;
+    text-align:justify;
+    color:white;
+}
+#instrucButton{
+	transform: translateY(-40px);
+	cursor:pointer;
+
+}

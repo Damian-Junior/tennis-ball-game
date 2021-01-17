@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tenis Ball Game</title>
+        <meta charset="utf-8">
+        <meta name ="author" content="Damian">
+        <link rel="stylesheet" type="text/css" href="game.css">
+        <link rel="icon" type="icon/x-image" href="image/ball2.png">
+    </head>
+    <body>
+        <canvas> </canvas>
+  
+        <img src="image/ball2.png" id ="ball" class="images">
+
+        <audio controls  id="bounce" class="sounds" >
+          <source src="sound/hitSound.mp3" type="audio/mp3">
+        </audio>
+
+        <audio controls id="bounce2" class="sounds">
+            <source src="sound/wallSound.mp3" type="audio/mp3">
+        </audio>
+
+        <audio controls  loop class="sounds" id="gameSound">
+            <source src="sound/gameMusic.mp3" type="audio/mp3" >
+        </audio>
+
+        <audio autoplay="true" id="settingMusic" class="sounds" loop="true">
+            <source src="sound/settingSound.mp3" type="audio/mp3">
+        </audio>
+
+        <audio controls id="optionMusic" class="sounds">
+            <source src="sound/optionMusic.mp3" type="audio/mp3">
+        </audio>
+
+
+ 
+
+       <div id="homePage"> 
+
+             <form id="setting">
+                 
+                 <label for="player_no">PLAYER<select id="player_no">
+                     <option value="onePlayer" style="margin-bottom: 10px">One Player</option>
+                     <option value="twoPlayer">Two Player</option>
+                 </select>
+                </label>
+
+                 <label for="music">MUSIC  <select id="music">
+                     <option value="off">Off</option>
+                     <option value="on" selected>On</option>
+                 </select>
+                </label>
+
+                 <label for="sound">SOUND<select id="sound">
+                     <option value="off">Off</option>
+                     <option value="on" selected>On</option>
+                 </select>
+                 </label>
+                 <label  id="instrucButton" >INSTRUCTION</label>
+
+                 <button type="button" id="button"> Start Game</button>
+             </form>
+            <div id="instruction">
+                <h1 id="heading">Game Instruction</h1>
+                <p id="guideText"> Long press the keyboard arrow right and left key to control the player right and left respectively, without letting it touch the base. The numbers of balls keep increaing as your score get higher to make the game more challenging</p>
+            </div>
+       </div>
+
+       <p id="ready_text"> READY </p>
+       
+        <div id="exitPage">
+            <div id ="exitBg">
+                <button type="button" id="continue">PLAY AGAIN</button>
+                <button type="button" id="close">EXIT</button>
+
+            </div>
+                    </div>
+        <script type="text/javascript" defer="true" src="tenisGame.js"></script>
+    </body>
+</html>
