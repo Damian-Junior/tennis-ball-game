@@ -183,16 +183,13 @@ function ballAddition(){
     }
 
     if ( score >= 40 ){
-            ball3.drawBall();
-            ball3.changeCirclePosition()
-            ball3.collideWall();
-            ball3.rebounce(); 
+            ball1.dx = ball2.dx = 6;
+            ball1.dy = ball2.dy = 7;
+           
     }
    if ( score >= 70 ){
-            ball4.drawBall();
-            ball4.changeCirclePosition()
-            ball4.collideWall();
-            ball4.rebounce(); 
+            ball1.dx = ball2.dx = 8;
+            ball1.dy = ball2.dy = 9;
     }
 
 }
